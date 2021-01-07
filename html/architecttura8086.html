@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <title>Assembly HTML</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="container_menu">
+                    <ul class="menu">
+                        <li class="menu_item">
+                            <a href="../index.html" class="menu_link"
+                                >Linguaggi ad alto e basso livello</a
+                            >
+                        </li>
+
+                        <li class="menu_item">
+                            <a href="../html/assembly.html" class="menu_link"
+                                >Linguaggio assembly</a
+                            >
+                        </li>
+
+                        <li class="menu_item finish_dotted_line">
+                            <a
+                                href="#"
+                                class="menu_link current_page"
+                                class="menu_link"
+                                >Architecttura dell'8086</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="architettura8086">
+                <h2>Architettura dell’8086</h2>
+                <p>
+                    La CPU 8086 è dotata di un <b>bus dati</b> a 16 bit e di un
+                    <b>bus indirizzi</b> a 20 bit, in grado di indirizzare 1
+                    Mbyte di memoria, cioè 2 locazioni. La CPU è divisa in due
+                    parti: la <b>EU</b> (Execution Unit) preposta all’esecuzione
+                    delle istruzioni e la <b>BIU</b> (Bus Interface Unit),
+                    responsabile della comunicazione con il bus. La
+                    caratteristica più rilevante del sistema è che queste due
+                    parti
+                    <b
+                        >possono lavorare autonomamente l’una rispetto
+                        all’altra</b
+                    >, e quindi possono fare contemporaneamente due cose
+                    diverse, in modo indipendente. Mentre la EU esegue
+                    un’istruzione (fase di execute), la BIU può cominciare a
+                    prelevare dalla memoria l’istruzione successiva. In questo
+                    modo è possibile rendere parallele (contemporanee) le
+                    operazioni di accesso al bus esterno (fetch) e le operazioni
+                    di elaborazione. Le due parti comunicano tramite una coda di
+                    prefetch (una coda di registri gestita con politica FIFO,
+                    First In First Out): mentre la BIU pone nella coda le
+                    istruzioni da eseguire, la EU le “preleva” dalla coda e le
+                    esegue. È questo un primo esempio di realizzazione della
+                    <b>tecnica del pipeline</b>. La coda di prefetch ha una
+                    dimensione di 6 byte, che è la dimensione massima di una
+                    istruzione assembly 8086.
+                </p>
+                <img
+                    src="../img/8086.png"
+                    alt=""
+                    class="architettura8086_img mtop mbott"
+                />
+                <p>
+                    La BIU effettua una lettura anticipata (pre-fetch) delle
+                    istruzioni dalla memoria in modo sequenziale e le pone nella
+                    coda. Poiché questa è gestita con politica FIFO, la prima
+                    istruzione che è entrata nella coda sarà la prima a essere
+                    prelevata dalla EU per essere eseguita. In questo modo le
+                    istruzioni sono anticipatamente caricate ed eseguite
+                    nell’ordine corretto. Questo meccanismo ha uno svantaggio:
+                    la lettura delle istruzioni è strettamente sequenziale, per
+                    cui in caso di salto (o interruzione) la coda predisposta è
+                    inutile e va ricostruita.
+                </p>
+            </section>
+
+            <section class="Registri_CPU_8086">
+                <h2>Registri di uso generale (general purpose registers)</h2>
+                <h4>
+                    La CPU 8086 è dotata dei seguenti registri, tutti a 16 bit
+                </h4>
+                <div class="registri">
+                    <p class="AX">
+                        <b class="tBold">AX -</b> Registro accumulatore. Può
+                        essere utilizzato come due registri di 8 bit:
+                        <b>AH</b>(parte alta) e <b>AL</b> (parte bassa).
+                    </p>
+                    <p class="BX">
+                        <b class="tBold">BX -</b> Registro base (utilizzato per
+                        contenere la base di un indirizzo relativo). Può essere
+                        usato come due registri di 8 bit: <b>BH</b> (parte alta)
+                        e <b>BL</b> (parte bassa).
+                    </p>
+                    <p class="CX">
+                        <b class="tBold">CX -</b> Registro contatore (utilizzato
+                        per esempio nell’istruzione LOOP).Può essere usato come
+                        due registri di 8 bit: <b>CH</b> (parte alta) e
+                        <b>CL</b> (parte bassa).
+                    </p>
+                    <p class="DX">
+                        <b class="tBold">DX -</b> Data Register (utilizzato in
+                        istruzioni aritmetiche e di I/O).Può essere usato come
+                        due registri di 8 bit: <b>DH</b> (parte alta) e
+                        <b>DL</b> ( parte bassa).
+                    </p>
+                </div>
+                <img class="mtop" src="../img/registri.png" alt="">
+            </section>
+        </main>
+
+        <footer>
+            Moraru Liviu 3C-i
+            <div class="line"></div>
+        </footer>
+    </body>
+</html>

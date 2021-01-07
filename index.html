@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <title>Assembly HTML</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="container_menu">
+                    <ul class="menu">
+                        <li class="menu_item">
+                            <a href="#" class="menu_link current_page"
+                                >Linguaggi ad alto e basso livello</a
+                            >
+                        </li>
+
+                        <li class="menu_item">
+                            <a href="html/assembly.html" class="menu_link"
+                                >Linguaggio assembly</a
+                            >
+                        </li>
+
+                        <li class="menu_item finish_dotted_line">
+                            <a
+                                href="html/architecttura8086.html"
+                                class="menu_link"
+                                >Architecttura dell'8086</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="Dal_sorgente">
+                <h2>Dal sorgente all’eseguibile</h2>
+                <div class="Dal_sorgente_p">
+                    <img
+                        class="Dal_sorgente_img mbott"
+                        src="./img/Low_high_level.png"
+                        alt=""
+                    />
+                    <p>
+                        In base alle caratteristiche e al livello di astrazione
+                        con cui un linguaggio codifica le istruzioni, i
+                        linguaggi di programmazione si classificano in linguaggi
+                        <b>ad alto livello </b> (per esempio C, Pascal, Java,
+                        ...) e linguaggi a <b>basso livello</b>.I linguaggi ad
+                        alto livello sono più vicini all’utente (programmatore)
+                        e più lontani dall’architettura fisica dell’elaboratore:
+                        hanno un livello di astrazione maggiore. I linguaggi a
+                        basso livello sono più lontani dall’utente, ma più
+                        vicini all’hardware e dipendenti da quest’ultimo.<br />
+                    </p>
+                </div>
+                <p>
+                    Il linguaggio di livello più basso è il linguaggio macchina,
+                    in cui ogni istruzione è codificata come sequenza di 0/1.
+                    Questo è comunque l’unico linguaggio che la CPU “comprende”,
+                    cioè l’unico decodificabile dalla CPU. Infatti 0 e 1 sono
+                    codifiche dello stato fisico di un segnale, che è
+                    direttamente legato all’hardware.Questo significa che un
+                    programma scritto in un qualsiasi linguaggio, per essere
+                    eseguito, deve essere tradotto in linguaggio macchina.
+                    Questo compito è svolto dal <b>compilatore</b> (o dall’
+                    <b>interprete</b> ), per i linguaggi ad alto livello, e dal
+                    programma assemblatore ( <b>assembler</b> ), per l’assembly.
+                </p>
+            </section>
+
+            <section class="lin_comp_inter">
+                <h2>Classificazione dei linguaggi ad alto livello</h2>
+                <h3>Linguaggi compilati</h3>
+                <p>
+                    Un linguaggio compilato (per esempio C++) necessita di un
+                    compilatore che legge il codice oggetto, effettua l’analisi
+                    sintattica, costruisce la symbol table (tabella dei simboli)
+                    per mappare i nomi delle variabili con gli indirizzi di
+                    memoria, traduce in codice macchina e genera un file
+                    oggetto. Questo sarà poi elaborato dal linker, che includerà
+                    altri eventuali moduli esterni e genererà il file
+                    eseguibile. Se non ci sono modifiche al codice, queste
+                    operazioni devono essere effettuate solo una volta.
+                </p>
+                <h3>Linguaggi interpretati</h3>
+                <p>
+                    Un linguaggio interpretato (per esempio Python) necessita di
+                    un interprete di comandi. Tipicamente le istruzioni di
+                    linguaggi interpretati possono essere utilizzate tramite una
+                    shell in modo interattivo. L’interprete effettua l’analisi
+                    sintattica dell’istruzione che, se corretta, viene subito
+                    eseguita. Esistono poi dei linguaggi, come per esempio Java,
+                    detti bytecode. Un programma scritto in Java viene prima
+                    compilato in un linguaggio intermedio, che successivamente
+                    viene interpretato da una macchina software (virtual
+                    machine) chiamata Java Virtual Machine. Questo al fine di
+                    rendere più efficiente l’esecuzione dei programmi,
+                    considerando anche la loro diffusione tramite il Web. Anche
+                    i linguaggi interpretati come Python possono avvalersi di
+                    una virtual machine. <br />
+                    In base al paradigma di programmazione utilizzato, abbiamo
+                    linguaggi procedurali, a oggetti, guidati da eventi,
+                    funzionali, di logica, ... Negli ultimi anni si sono diffusi
+                    ambienti di programmazione che uniscono le caratteristiche
+                    del paradigma a oggetti con quello guidato da eventi,
+                    sfruttando anche la grafica. Spesso questi ambienti vengono
+                    chiamati «visuali», ma questo non è un vero e proprio
+                    paradigma di programmazione.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            Moraru Liviu 3C-i
+            <div class="line"></div>
+        </footer>
+    </body>
+</html>

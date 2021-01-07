@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <title>Assembly HTML</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="container_menu">
+                    <ul class="menu">
+                        <li class="menu_item">
+                            <a href="../index.html" class="menu_link"
+                                >Linguaggi ad alto e basso livello</a
+                            >
+                        </li>
+
+                        <li class="menu_item">
+                            <a href="#" class="menu_link current_page"
+                                >Linguaggio assembly</a
+                            >
+                        </li>
+
+                        <li class="menu_item finish_dotted_line">
+                            <a href="architecttura8086.html" class="menu_link"
+                                >Architecttura dell'8086</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="Assembly">
+                <h2>Il linguaggio assembly</h2>
+                <p class="Assembly_p">
+                    L’assembly è un linguaggio di basso livello, dipendente
+                    strettamente dall’architettura e, quindi, da come è fatto il
+                    sistema su cui deve essere eseguito. Viene tradotto in
+                    linguaggio macchina dall’ <b>assembler</b> e caricato in memoria
+                    centrale per essere eseguito da un altro software di
+                    sistema, il <b>loader</b>.
+                </p>
+
+                <div class="container_assembler_descr">
+                    <img
+                        class="Assembly_img"
+                        src="../img/Assembler.png"
+                        alt=""
+                    />
+                    <p class="assembler_descr">
+                        La traduzione delle istruzioni assembly da parte di un
+                        programma assemblatore produce il codice macchina in
+                        formato binario. Il linguaggio assembly usa codici
+                        mnemonici (anziché i bit) per facilitare il
+                        riconoscimento, da parte del programmatore, del
+                        significato di un’istruzione. Inoltre consente
+                        l’utilizzo di etichette per identificare gli indirizzi
+                        di memoria che contengono istruzioni o dati, indicati
+                        come variabili.
+                    </p>
+                </div>
+            </section>
+
+            <section class="ciclo_macchina">
+                <h2>Il clock: il ciclo macchina</h2>
+                <p>
+                    Il ciclo macchina è il l’insieme di operazione che compie la
+                    CPU . Esso si divide in quattro fasi: il fetch
+                    dell’istruzione, decode dell’istruzione, fetch degli
+                    operandi ed execute dell’istruzione. L’unità di controllo
+                    esegue questo insieme di operazioni una volta che si preleva
+                    l’istruzione, essa si trasferisce in uno specifico registro
+                    e codificata. Dopo aver fatto ciò, la CPU si occupa di far
+                    eseguire l’istruzione attraverso dei segnali.
+                </p>
+                <h3>Fetch dell’istruzione</h3>
+                <p>
+                    In questa fase viene identificato il momento in cui la CPU
+                    deve prendere l’istruzione da eseguire. Si mette in contatto
+                    con la memoria RAM per prendere il codice macchina
+                    dell’istruzione da eseguire. La CU legge la cella di memoria
+                    contenente l’indirizzo ed incrementa il contenuto del
+                    registro Program Counter. Si passa alla fase successiva.
+                </p>
+                <h3>Decode dell’istruzione</h3>
+                <p>
+                    In questa fase avviene l’interpretazione dell’istruzione e
+                    la preparazione dei dispositivi necessari all’esecuzione.
+                </p>
+                <h3>Fetch degli operandi</h3>
+                <p>
+                    In base a ciò che è stato decodificato nella fase
+                    precedente, il processore controlla se è necessario o no
+                    prendere altri dati. Se ce n’è bisogno, avviene questa
+                    operazione.
+                </p>
+                <h3>Execute dell’istruzione</h3>
+                <p>
+                    In questa fase la CU invia dei segnali. Questi permettono
+                    l’esecuzione del programma e, successivamente, il programma
+                    viene eseguito.
+                </p>
+
+                <div class="ciclo_machina_img">
+                    <img class="mtop" src="../img/CPU_block_diagram.svg_-320x443.png" alt="" width="400px" height="450px">
+                </div>
+            </section>
+        </main> 
+
+        <footer>
+            Moraru Liviu 3C-i
+            <div class="line"></div>
+        </footer>
+    </body>
+</html>
